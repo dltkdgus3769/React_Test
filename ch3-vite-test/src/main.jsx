@@ -5,6 +5,7 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
+    {/* 부모 컴포넌트  */}
     <App />
   </StrictMode>,
 )
