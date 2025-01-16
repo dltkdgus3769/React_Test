@@ -14,6 +14,9 @@ const EventPractice2 = () => {
     // 교체작업1-2
     const { username, message } = form;
 
+    const [output, setOutput] = useState('');
+
+
     // 교체작업1-3
     // const onChangeUsername = (e) => setUsername(e.target.value);
     // const onChangeMessage = (e) => setMessage(e.target.value);
@@ -34,12 +37,25 @@ const EventPractice2 = () => {
     };
     // 교체작업1-5
     const onClick = () => {
-        alert(username + ': ' + message);
+        // alert(username + ': ' + message);
+        if (!username || !message) {
+            //!username , 값을 없을 경우 실행하겠다. 
+            alert("username 과 message 모두 작성해주세요.!!!")
+        }
+        setOutput(`username : ${username} , message: ${message}`);
+
         setForm({
             username: '',
             message: ''
         });
     };
+
+    const onClear = () => {
+        setForm({
+            username: '',
+            message: ''
+        });
+    }
 
 
     const onKeyPress = (e) => {
@@ -51,8 +67,9 @@ const EventPractice2 = () => {
     return (
         <div>
             <h1>이벤트 연습, 함수형 컴포넌트 버전.</h1>
-            <h1>message : {message}</h1>
-            <h1>username : {username}</h1>
+            {/* <h1>message : {message}</h1>
+            <h1>username : {username}</h1> */}
+            <h1>출력용 결과 확인 : {output}</h1>
             <input
                 type="text"
                 name="username"
@@ -72,6 +89,7 @@ const EventPractice2 = () => {
                 onKeyPress={onKeyPress}
             />
             <button onClick={onClick}>확인</button>
+            <button onClick={onClear}>초기화</button>
         </div>
     );
 };
