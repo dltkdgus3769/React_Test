@@ -29,6 +29,10 @@ const AverageEx = () => {
     }, []); // 컴포넌트가 처음 렌더링될 때만 함수 생성
 
     const onInsert = useCallback(() => {
+        if (number === '-') {
+            alert("숫자만 입력하세요!")
+            return;
+        }
         if (parseInt(number, 10) < 0) {
             alert("0보다 큰수를 입력하세요!")
             return;
