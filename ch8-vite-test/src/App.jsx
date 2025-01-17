@@ -7,6 +7,7 @@ import './App.css'
 import AverageUseCallback from './component/AverageUseCallback';
 import AverageUseRef from './component/AverageUseRef';
 import InfoUseCostomHooks from './component/InfoUseCostomHooks';
+import AverageEx from './component/AverageEx';
 
 const App = () => {
   const [visible, setVisible] = useState(false);
@@ -33,7 +34,8 @@ const App = () => {
       <h2>useCallback 사용 Average</h2>
       <AverageUseCallback /> */}
       {/* <AverageUseRef /> */}
-      <InfoUseCostomHooks />
+      {/* <InfoUseCostomHooks /> */}
+      <AverageEx />
     </>
   );
 };
