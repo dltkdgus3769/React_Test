@@ -20,6 +20,10 @@ const AverageEx = () => {
                 alert("숫자만 입력하세요!")
                 return;
             }
+            if (e.target.value < 1 || e.target.value > 100) {
+                alert("1이상 100이하 숫자 입력하세요!")
+                e.target.value = null;
+            }
         }
         setNumber(e.target.value);
     }, []); // 컴포넌트가 처음 렌더링될 때만 함수 생성
@@ -27,10 +31,6 @@ const AverageEx = () => {
     const onInsert = useCallback(() => {
         if (parseInt(number, 10) < 0) {
             alert("0보다 큰수를 입력하세요!")
-            return;
-        }
-        if (parseInt(number, 10) < 1 || parseInt(number, 10) > 100) {
-            alert("1이상 100이하의 수만 입력하세요!")
             return;
         }
         const nextList = list.concat(parseInt(number, 10));
