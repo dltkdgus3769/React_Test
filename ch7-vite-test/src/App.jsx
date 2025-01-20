@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import LifeCycleSample from './component/LifeCycleSample';
 import ErrorBoundary from './component/ErrorBoundary';
 import LifeCycleSampleEx from './component/LifeCycleSampleEx';
-
+import './App.css';
 // 랜덤 색상을 생성합니다.
 function getRandomColor() {
   return '#' + Math.floor(Math.random() * 16777215).toString(16).padStart(6, '0');

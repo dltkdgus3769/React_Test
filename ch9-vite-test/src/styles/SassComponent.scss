@@ -1,0 +1,80 @@
+@import './utils';
+
+
+:local {
+    .wrapper2 {
+        background: black;
+        padding: 2rem;
+        color: yellow;
+        font-size: 3rem;
+    }
+}
+
+.SassComponent {
+    display: flex;
+    background: $oc-gray-2;
+
+    @include media('<768px') {
+        background: $oc-gray-9;
+    }
+
+    .box {
+        background: red;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+
+        &.red {
+            background: $red;
+            @include square(1, 'red');
+        }
+
+        &.orange {
+            background: $orange;
+            @include square(2, 'orange');
+        }
+
+        &.yellow {
+            background: $yellow;
+            @include square(3, 'yellow');
+        }
+
+        &.green {
+            background: $green;
+            @include square(4, 'green');
+        }
+
+        &.blue {
+            background: $blue;
+            @include square(5, 'blue');
+        }
+
+        &.indigo {
+            background: $indigo;
+            @include square(6, 'indigo');
+        }
+
+        &.violet {
+            background: $violet;
+            @include square(7, 'violet');
+        }
+
+        &.pink {
+            background: $pink;
+            @include square(8, 'pink');
+        }
+
+        &:first-child {
+            background: $indigo;
+        }
+
+        &:last-child {
+            background: $violet;
+        }
+
+        &:hover {
+            background: white
+        }
+
+
+    }
+}
