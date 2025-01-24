@@ -29,6 +29,9 @@ const Home = () => {
                 <li>
                     <Link to="/mypage">마이페이지</Link>
                 </li>
+                <li>
+                    <Link to="/category">카테고리</Link>
+                </li>
             </ul>
         </div >
     );

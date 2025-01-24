@@ -4,9 +4,12 @@ const Category = () => {
     const { name } = useParams();
 
     return (
-        <div>
-            <h2>카테고리 {name}</h2>
-        </div>
+        <>
+            <div>
+                <h2>카테고리 {name}</h2>
+            </div>
+
+        </>
     );
 };
 

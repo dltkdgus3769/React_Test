@@ -32,11 +32,10 @@ const App = () => {
           <Route path=":id" element={<Article />} />
         </Route>
 
-        Articles 관련 라우트
+        {/* Articles 관련 라우트 */}
         <Route path="/category" element={<Categories />}>
           <Route path=":name" element={<Category />}>
-            <Route index element={<Category />} />
-            <Route path="details" element={<Details />} />
+            <Route index element={<Details />} />
           </Route>
         </Route>
 

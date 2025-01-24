@@ -20,14 +20,17 @@ const CategoryItem = ({ name }) => {
     };
 
     return (
-        <li>
-            <NavLink
-                to={`/category/${name}`}
-                style={({ isActive }) => (isActive ? activeStyle : undefined)}
-            >
-                카테고리 {name}
-            </NavLink>
-        </li>
+        <>
+            <li>
+                <NavLink
+                    to={`/category/${name}`}
+                    style={({ isActive }) => (isActive ? activeStyle : undefined)}
+                >
+                    카테고리 {name}
+                </NavLink>
+            </li>
+
+        </>
     );
 };
 
